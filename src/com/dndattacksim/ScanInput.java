@@ -21,24 +21,6 @@ public class ScanInput {
         catch(Exception e){}
     }
 
-    public ArrayList<Integer> getDiceToReroll() {
-
-        System.out.println("Enter which dice you would like to reroll: (Ex: 2 4 5)");
-        Scanner scanner = new Scanner(System.in);
-        String playerInput = scanner.nextLine();
-
-        String[] strDiceToReroll = playerInput.replaceAll("\\ ", "").split("");
-
-        ArrayList<Integer> diceToReroll = new ArrayList<>();
-
-        if (!playerInput.isEmpty()) {
-            for (int i = 0; i < strDiceToReroll.length; i++) {
-                diceToReroll.add(Integer.parseInt(strDiceToReroll[i]));
-            }
-        }
-        return diceToReroll;
-    }
-
     public String getPlayerDamageDice() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your damage dice (Ex: 2d4 | 1d10):");
